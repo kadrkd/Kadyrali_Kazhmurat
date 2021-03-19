@@ -1,0 +1,23 @@
+{
+    "product":[
+        {
+            "id":"1",
+            "productName":"Super Titanium",
+            "price":"10000$"
+        },
+        {
+            "id":"2",
+            "productName":"Atomic Timekeeping",
+            "price":"90000$"
+        },
+        {
+            "id":"3",
+            "productName":"Atomic Timekeeping",
+            "price":"90000$"
+        },
+
+
+    ]
+
+
+}

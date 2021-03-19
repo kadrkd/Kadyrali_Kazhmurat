@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <title>WatchShop</title>
+    <meta charset="utf-8">
+  <script type="text/javascript">
+      var qtyTotal = 0;
+      var priceTotal = 0;
+
+      function updateForm() {
+          var product = document.getElementById("product").value;
+
+          var qty = document.getElementById("quantity").value;
+          qtyTotal = qtyTotal + parseInt(qty);
+          document.getElementById("qtyTotals").innerHTML=qtyTotal;
+
+          var price = document.getElementById("price").value;
+          priceTotal = priceTotal + parseInt(price);
+          document.getElementById("priceTotals").innerHTML=priceTotal;
+
+          var table=document.getElementById("results");
+          var row=table.insertRow(-1);
+          var cell1=row.insertCell(0);
+          var cell2=row.insertCell(1);
+          var cell3=row.insertCell(2);
+          cell1.innerHTML=product;
+          cell2.innerHTML=qty;
+          cell3.innerHTML=price;
+      }
+  </script>
+  </head>
+  <body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo" data-scroll="#intro">WatchShop</div>
+    
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="index.html">About</a>
+                    <a class="nav__link" href="page.html">Service</a>
+                    <a class="nav__link" href="SingUp.html">SingIn</a>
+                    <a class="nav__link active" href="buy.html"><i class="fas fa-shopping-basket"></i></a>
+                    <a class="nav__link" href="#" data-scroll="#footer">Contact</a>
+                    <a class="nav__link" href="indexrus.html">
+                        <i class="fas fa-language">
+
+                        </i>
+                    </a>
+                    <a class="nav__link" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </nav>
+    
+            </div>
+        </div>
+    </header>
+<div class="page">
+    <div class="intro" id="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h2 class="intro__suptitle">WatchShop</h2>
+                <h1 class="intro__title">Welcome</h1>
+
+                </div>
+        </div>
+
+    </div>
+
+  <form name="order" id="order">
+      <table>
+          <tr>
+              <td>
+                  <label for="product">Product id:</label>
+              </td>
+              <td>
+                  <input id="product" name="product" title="Please enter only alphabetic characters" type="text" size="28" />
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <label for="quantity">Quantity:</label>
+              </td>
+              <td>
+                  <input id="quantity" name="quantity" title="Enter item quantity" width="196px" />
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <label for="price">Price:</label>
+              </td>
+              <td>
+                  <input id="price" name="price" title="Please enter only numeric characters" size="28" />
+              </td>
+          </tr>
+      </table>
+      <input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset" />
+      <button type="button" onClick="updateForm();"/>Add To Table</button>
+  </form>
+  <br>
+
+  <table id="results" width="360">
+      <thead>
+      <tr>
+          <th scope="col" width="120"><i class="fas fa-id-badge    "></i></th>
+          <th scope="col" width="120">Quantity</th>
+          <th scope="col" width="120">Price</th>
+      </tr>
+      </thead>
+  </table>
+
+  <table id="resultTotals" width="360">
+  <tr>
+      <td scope="col" width="120"><div>Total</div></td>
+      <td scope="col" width="120"><div id="qtyTotals"></div></td>
+      <td scope="col" width="120"><div id="priceTotals"></div></td>
+  </tr>
+  </table>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+
+        <div class="footer__inner">
+            <div class="footer__col  footer__col--first">
+                <div class="footer__logo">Watch</div>
+                <div class="footer__text">At WatchShop, you can guarantee you will find more watch brands than anywhere else. From the biggest designer brands, to the best of luxury and some hidden gems, along with outstanding service and next day delivery, WatchShop is the hottest place to buy your next watch.</div>
+
+                <div class="footer__social">
+                    <div class="footer__social-header">
+                        <b>15k</b> followers
+                    </div>
+                    <div class="footer__social-content">
+                        Follow Us:
+                        <a href="#" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="subscribe" action="/" method="post">
+                    <input class="subscribe__input" type="email" name="name" placeholder="Your Email...">
+                    <button class="subscribe__btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer__col  footer__col--second">
+               
+            </div>
+
+            <div class="footer__col  footer__col--third">
+               
+                <div class="instagram">
+                    <a class="instagram__item" href="#" target="_blank">
+                        <img src="assets/images/BOSS_SS21_010321_HP_Desktop_WebP.webp" alt="">
+                    </a>
+                    <a class="instagram__item" href="#" target="_blank">
+                        <img src="assets/images/clients-bg.jpg" alt="">
+                    </a>
+                    <a class="instagram__item" href="#" target="_blank">
+                        <img src="assets/images/devices-bg.jpg" alt="">
+                    </a>
+                    <a class="instagram__item" href="#" target="_blank">
+                        <img src="assets/images/OB_Rainbow_Bee_Mar21_HP_Desktop_WebP.webp" alt="">
+                    </a>
+                    <a class="instagram__item" href="#" target="_blank">
+                        <img src="assets/images/Tommy_SS21_150321_Activity_HP_Desktop_WebP.webp" alt="">
+                    </a>
+                    <a class="instagram__item" href="#" target="_blank">
+                        <img src="assets/images/VW_SS21_March_HP_Desktop_WebP.webp" alt="">
+                    </a>
+                 
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2021 WatchShop Web Site create by <span>Kadyrali K.</span>
+        </div>
+
+    </div>
+</footer>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+  </body>
+  </html>
